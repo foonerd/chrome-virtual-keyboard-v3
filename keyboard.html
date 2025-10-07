@@ -1,0 +1,391 @@
+<div id="virtualKeyboardChromeExtensionOverlayScrollExtend" style="display: none; height:500px">
+</div>
+<div id="virtualKeyboardChromeExtensionOverlayDemand" style="display: none;">
+</div>
+<div id="virtualKeyboardChromeExtensionOverlaySettings" _state="closed" class="virtualKeyboardChromeExtensionOverlay" style="display: none;">
+	<ul id="virtualKeyboardChromeExtensionOverlaySettingsUl">
+		<li class="virtualKeyboardChromeExtensionOverlayButton" _action="setKeyboard" _layout="en">EN</li>
+		<li class="virtualKeyboardChromeExtensionOverlayButton" _action="setKeyboard" _layout="ru">RU</li>
+	</ul>
+</div>
+<div id="virtualKeyboardChromeExtensionUrlBar" style="top: -100px;">
+	<form onsubmit="this.action = 'http://'+document.getElementById('virtualKeyboardChromeExtensionUrlBarTextBox').value;">
+	<input type="text" id="virtualKeyboardChromeExtensionUrlBarTextBox" placeholder="http://" />
+	<input type="submit" value="Go" />
+	</form>
+</div>
+<div id="virtualKeyboardChromeExtension">
+	<div id="virtualKeyboardChromeExtensionDraggableLeft"></div>
+	<div id="virtualKeyboardChromeExtensionDraggableRight"></div>
+	<div id="virtualKeyboardKanaKanjiConversionResults" style="display: none;">
+		<div id="browseResults">
+			<ul>
+				<li class="kbdH kbdClick" _key="ScrollLeft">
+					<i class="fa fa-arrow-left" aria-hidden="true"></i>
+				</li>
+				<li class="kbdH kbdClick" _key="ScrollRight">
+					<i class="fa fa-arrow-right" aria-hidden="true"></i>
+				</li>
+			</ul>
+		</div>
+		<div class="scrollable-bar" id="scroll">
+			<ul id="japaneseConversionResults"></ul>
+		</div>	
+	</div>
+	<div id="virtualKeyboardChromeExtensionNumberBarKbdInput" style="display: none;">
+		<table cellpadding="2">
+			<tr>
+				<td class="kbdH kbdClick" _key="7"><span>7</span></td>
+				<td class="kbdH kbdClick" _key="8"><span>8</span></td>
+				<td class="kbdH kbdClick" _key="9"><span>9</span></td>
+				<td class="kbdH kbdClick" _key="#"><span>#</span></td>
+				<td class="kbdD kbdClick" _key="Backspace" rowspan="2"><span>Back</span></td>
+			</tr>
+		</table>	
+		<table cellpadding="2">
+			<tr>
+				<td class="kbdH kbdClick" _key="4"><span>4</span></td>
+				<td class="kbdH kbdClick" _key="5"><span>5</span></td>
+				<td class="kbdH kbdClick" _key="6"><span>6</span></td>
+				<td class="kbdH kbdClick" _key="-"><span>-</span></td>
+				<td class="kbdH kbdClick" _key=")"><span>)</span></td>
+			</tr>
+		</table>	
+		<table cellpadding="2">
+			<tr>
+				<td class="kbdH kbdClick" _key="1"><span>1</span></td>
+				<td class="kbdH kbdClick" _key="2"><span>2</span></td>
+				<td class="kbdH kbdClick" _key="3"><span>3</span></td>
+				<td class="kbdH kbdClick" _key="+"><span>+</span></td>
+				<td class="kbdH kbdClick" _key="("><span>(</span></td>
+			</tr>
+		</table>	
+		<table cellpadding="2">
+			<tr>
+				<td class="kbdH kbdClick" _key="0"><span>0</span></td>
+				<td class="kbdH kbdClick" _key="."><span>.</span></td>
+				<td class="kbdH kbdClick" _key="*"><span>*</span></td>
+				<td class="kbdH kbdClick" _key="$"><span>$</span></td>
+				<td class="kbdD kbdClick" _key="Enter"><span>Enter</span></td>
+			</tr>
+		</table>	
+	</div>
+	<div id="virtualKeyboardChromeExtensionMainKbd">
+		<table cellpadding="2" id="virtualKeyboardChromeExtensionNumberBarKbd1">
+			<tr>
+				<td class="kbdH kbNumberMain kbdClick " _key="1"><span>1</span></td>
+				<td class="kbdH kbNumberMain kbdClick " _key="2"><span>2</span></td>
+				<td class="kbdH kbNumberMain kbdClick " _key="3"><span>3</span></td>
+				<td class="kbdH kbNumberMain kbdClick " _key="4"><span>4</span></td>
+				<td class="kbdH kbNumberMain kbdClick " _key="5"><span>5</span></td>
+				<td class="kbdH kbNumberMain kbdClick " _key="6"><span>6</span></td>
+				<td class="kbdH kbNumberMain kbdClick " _key="7"><span>7</span></td>
+				<td class="kbdH kbNumberMain kbdClick " _key="8"><span>8</span></td>
+				<td class="kbdH kbNumberMain kbdClick " _key="9"><span>9</span></td>
+				<td class="kbdH kbNumberMain kbdClick " _key="0"><span>0</span></td>
+			</tr>
+		</table>
+		<div id="virtualKeyboardChromeExtensionMainKbdPH"></div>
+	</div>
+	<div id="virtualKeyboardChromeExtensionMainNumbers" style="display: none;">
+		<table cellpadding="2">
+			<tr>
+				<td class="kbdH kbdClick" _key="_"><span>_</span></td>
+				<td class="kbdH kbdClick" _key="\"><span>\</span></td>
+				<td class="kbdH kbdClick" _key=":"><span>:</span></td>
+				<td class="kbdH kbdClick" _key=";"><span>;</span></td>
+				<td class="kbdH kbdClick" _key=")"><span>)</span></td>
+				<td class="kbdH kbdClick" _key="("><span>(</span></td>
+				<td class="kbdH kbdClick" _key="/"><span>/</span></td>
+				<td class="kbdH kbdClick" _key="^"><span>^</span></td>
+				<td class="kbdH kbdClick" _key="1"><span>1</span></td>
+				<td class="kbdH kbdClick" _key="2"><span>2</span></td>
+				<td class="kbdH kbdClick" _key="3"><span>3</span></td>
+				<td style="width: 2px;"><span></span></td>
+				<td class="kbdD kbdClick" _key="Backspace"><span class="kBack"></span></td>
+			</tr>
+			<tr>
+				<td class="kbdH kbdClick" _key="&euro;"><span>&euro;</span></td>
+				<td class="kbdH kbdClick" _key="$"><span>$</span></td>
+				<td class="kbdH kbdClick" _key="&pound;"><span>&pound;</span></td>
+				<td class="kbdH kbdClick" _key="&"><span>&amp;</span></td>
+				<td class="kbdH kbdClick" _key="@"><span>@</span></td>
+				<td class="kbdH kbdClick" _key='"'><span>"</span></td>
+				<td class="kbdH kbdClick" _key="*"><span>*</span></td>
+				<td class="kbdH kbdClick" _key="~"><span>~</span></td>
+				<td class="kbdH kbdClick" _key="4"><span>4</span></td>
+				<td class="kbdH kbdClick" _key="5"><span>5</span></td>
+				<td class="kbdH kbdClick" _key="6"><span>6</span></td>
+				<td style="width: 2px;"><span></span></td>
+				<td class="kbdD kbdClick" _key="Enter"><span class="kEnter"></span></td>
+			</tr>
+			<tr>
+				<td class="kbdH kbdClick" _key="?"><span>?</span></td>
+				<td class="kbdH kbdClick" _key="!"><span>!</span></td>
+				<td class="kbdH kbdClick" _key="'"><span>'</span></td>
+				<td class="kbdH kbdClick" _key="_"><span>_</span></td>
+				<td class="kbdH kbdClick" _key="<"><span>&lt;</span></td>
+				<td class="kbdH kbdClick" _key=">"><span>&gt;</span></td>
+				<td class="kbdH kbdClick" _key="-"><span>-</span></td>
+				<td class="kbdH kbdClick" _key="`"><span>`</span></td>
+				<td class="kbdH kbdClick" _key="7"><span>7</span></td>
+				<td class="kbdH kbdClick" _key="8"><span>8</span></td>
+				<td class="kbdH kbdClick" _key="9"><span>9</span></td>
+				<td style="width: 2px;"><span></span></td>
+				<td class="kbdD kbdClick" _key="&123"><span class="kAbc">ABC</span></td>
+			</tr>
+			<tr>
+				<td class="kbdH kbdClick" _key="["><span>[</span></td>
+				<td class="kbdH kbdClick" _key="]"><span>]</span></td>
+				<td class="kbdH kbdClick" _key="{"><span>{</span></td>
+				<td class="kbdH kbdClick" _key="}"><span>}</span></td>
+				<td class="kbdH kbdClick" _key="#"><span>#</span></td>
+				<td class="kbdH kbdClick" _key=","><span>,</span></td>
+				<td class="kbdH kbdClick" _key="+"><span>+</span></td>
+				<td class="kbdH kbdClick" _key="%"><span>%</span></td>
+				<td colspan="2" class="kbdH kbdClick" _key="0"><span>0</span></td>
+				<td class="kbdD kbdClick" _key="."><span>.</span></td>
+				<td style="width: 2px;"><span></span></td>
+				<td class="kbdD kbdClick" _key="Close"><span class="kClose"></span></td>
+			</tr>
+		</table>	
+	</div>
+	<div id="virtualKeyboardChromeExtensionHiraganaKeys" style="display: none;">
+		<table cellpadding="2" class="virtualKeyboardChromeExtensionMainKeys">
+			<tr>
+				<td class="kbdH kbdClick" _key="っ"><span>っ</span></td>
+				<td class="kbdH kbdClick" _key="ぁ"><span>ぁ</span></td>
+				<td class="kbdH kbdClick" _key="ゃ"><span>ゃ</span></td>
+				<td class="kbdH kbdClick" _key="ぱ"><span>ぱ</span></td>
+				<td class="kbdH kbdClick" _key="ば"><span>ば</span></td>
+				<td class="kbdH kbdClick" _key="だ"><span>だ</span></td>
+				<td class="kbdH kbdClick" _key='ざ'><span>ざ</span></td>
+				<td class="kbdH kbdClick" _key="が"><span>が</span></td>
+				<td class="kbdD kbdClick" _key="Backspace"><span class="kBack"></span></td>
+			</tr>
+		</table>
+		<table cellpadding="2" class="virtualKeyboardChromeExtensionMainKeys">
+			<tr>
+				<td class="kbdH kbdClick" _key="ー"><span>ー</span></td>
+				<td class="kbdH kbdClick" _key="ぃ"><span>ぃ</span></td>
+				<td style="width: -1px;"><span></span></td>
+				<td class="kbdH kbdClick" _key="ぴ"><span>ぴ</span></td>
+				<td class="kbdH kbdClick" _key="び"><span>び</span></td>
+				<td class="kbdH kbdClick" _key="ぢ"><span>ぢ</span></td>
+				<td class="kbdH kbdClick" _key="じ"><span>じ</span></td>
+				<td class="kbdH kbdClick" _key="ぎ"><span>ぎ</span></td>
+				<td class="kbdD kbdClick" _key="Enter"><span class="kEnter"></span></td>
+			</tr>
+		</table>
+		<table cellpadding="2" class="virtualKeyboardChromeExtensionMainKeys">
+			<tr>
+				<td style="width: -1px;"><span></span></td>
+				<td class="kbdH kbdClick" _key="ぅ"><span>ぅ</span></td>
+				<td class="kbdH kbdClick" _key="ゅ"><span>ゅ</span></td>
+				<td class="kbdH kbdClick" _key="ぷ"><span>ぷ</span></td>
+				<td class="kbdH kbdClick" _key="ぶ"><span>ぶ</span></td>
+				<td class="kbdH kbdClick" _key="づ"><span>づ</span></td>
+				<td class="kbdH kbdClick" _key="ず"><span>ず</span></td>
+				<td class="kbdH kbdClick" _key="ぐ"><span>ぐ</span></td>
+				<td class="kbdD kbdClick" _key='" °'><span class="kAbc">あ</span></td>
+			</tr>
+		</table>
+		<table cellpadding="2" class="virtualKeyboardChromeExtensionMainKeys">
+			<tr>
+				<td class="kbdH kbdClick" _key="、"><span>、</span></td>
+				<td class="kbdH kbdClick" _key="ぇ"><span>ぇ</span></td>
+        		<td style="width: -1px;"><span></span></td>
+				<td class="kbdH kbdClick" _key="ぺ"><span>ぺ</span></td>
+				<td class="kbdH kbdClick" _key="べ"><span>べ</span></td>
+				<td class="kbdH kbdClick" _key="で"><span>で</span></td>
+				<td class="kbdH kbdClick" _key="ぜ"><span>ぜ</span></td>
+				<td class="kbdH kbdClick" _key="げ"><span>げ</span></td>
+        		<td style="width: -1px;"><span></span></td>
+			</tr>
+		</table>
+		<table cellpadding="2" class="virtualKeyboardChromeExtensionMainKeys">
+			<tr>
+				<td class="kbdH kbdClick" _key="。"><span>。</span></td>
+				<td class="kbdH kbdClick" _key="ぉ"><span>ぉ</span></td>
+				<td class="kbdH kbdClick" _key="ょ"><span>ょ</span></td>
+				<td class="kbdH kbdClick" _key="ぽ"><span>ぽ</span></td>
+				<td class="kbdH kbdClick" _key="ぼ"><span>ぼ</span></td>
+				<td class="kbdH kbdClick" _key="ど"><span>ど</span></td>
+				<td class="kbdH kbdClick" _key="ぞ"><span>ぞ</span></td>
+				<td class="kbdH kbdClick" _key="ご"><span>ご</span></td>
+				<td class="kbdD kbdClick" _key="Close"><span class="kClose"></span></td>
+			</tr>
+		</table>	
+	</div>
+	<div id="virtualKeyboardChromeExtensionKatakanaKeys" style="display: none;">
+		<table cellpadding="2" class="virtualKeyboardChromeExtensionMainKeys">
+			<tr>
+				<td class="kbdH kbdClick" _key="ッ"><span>ッ</span></td>
+				<td class="kbdH kbdClick" _key="ァ"><span>ァ</span></td>
+				<td class="kbdH kbdClick" _key="ャ"><span>ャ</span></td>
+				<td class="kbdH kbdClick" _key="パ"><span>パ</span></td>
+				<td class="kbdH kbdClick" _key="バ"><span>バ</span></td>
+				<td class="kbdH kbdClick" _key="ダ"><span>ダ</span></td>
+				<td class="kbdH kbdClick" _key='ザ'><span>ザ</span></td>
+				<td class="kbdH kbdClick" _key="ガ"><span>ガ</span></td>
+				<td class="kbdD kbdClick" _key="Backspace"><span class="kBack"></span></td>
+			</tr>
+		</table>
+		<table cellpadding="2" class="virtualKeyboardChromeExtensionMainKeys">
+			<tr>
+				<td class="kbdH kbdClick" _key="ー"><span>ー</span></td>
+				<td class="kbdH kbdClick" _key="ィ"><span>ィ</span></td>
+				<td style="width: -1px;"><span></span></td>
+				<td class="kbdH kbdClick" _key="ピ"><span>ピ</span></td>
+				<td class="kbdH kbdClick" _key="ビ"><span>ビ</span></td>
+				<td class="kbdH kbdClick" _key="ヂ"><span>ヂ</span></td>
+				<td class="kbdH kbdClick" _key="ジ"><span>ジ</span></td>
+				<td class="kbdH kbdClick" _key="ギ"><span>ギ</span></td>
+				<td class="kbdD kbdClick" _key="Enter"><span class="kEnter"></span></td>
+			</tr>
+		<table cellpadding="2" class="virtualKeyboardChromeExtensionMainKeys">
+			<tr>
+				<td style="width: -1px;"><span></span></td>
+				<td class="kbdH kbdClick" _key="ゥ"><span>ゥ</span></td>
+				<td class="kbdH kbdClick" _key="ュ"><span>ュ</span></td>
+				<td class="kbdH kbdClick" _key="プ"><span>プ</span></td>
+				<td class="kbdH kbdClick" _key="ブ"><span>ブ</span></td>
+				<td class="kbdH kbdClick" _key="ヅ"><span>ヅ</span></td>
+				<td class="kbdH kbdClick" _key="ズ"><span>ズ</span></td>
+				<td class="kbdH kbdClick" _key="グ"><span>グ</span></td>
+				<td class="kbdD kbdClick" _key='" °'><span class="kAbc">ア</span></td>
+			</tr>
+		</table>
+		<table cellpadding="2" class="virtualKeyboardChromeExtensionMainKeys">
+			<tr>
+				<td class="kbdH kbdClick" _key="、"><span>、</span></td>
+				<td class="kbdH kbdClick" _key="ェ"><span>ェ</span></td>
+        		<td style="width: -1px;"><span></span></td>
+				<td class="kbdH kbdClick" _key="ペ"><span>ペ</span></td>
+				<td class="kbdH kbdClick" _key="ベ"><span>ベ</span></td>
+				<td class="kbdH kbdClick" _key="デ"><span>デ</span></td>
+				<td class="kbdH kbdClick" _key="ゼ"><span>ゼ</span></td>
+				<td class="kbdH kbdClick" _key="ゲ"><span>ゲ</span></td>
+				<td style="width: -1px;"><span></span></td>
+			</tr>
+		</table>
+		<table cellpadding="2" class="virtualKeyboardChromeExtensionMainKeys">
+			<tr>
+				<td class="kbdH kbdClick" _key="。"><span>。</span></td>
+				<td class="kbdH kbdClick" _key="ォ"><span>ォ</span></td>
+				<td class="kbdH kbdClick" _key="ョ"><span>ョ</span></td>
+				<td class="kbdH kbdClick" _key="ポ"><span>ポ</span></td>
+				<td class="kbdH kbdClick" _key="ボ"><span>ボ</span></td>
+				<td class="kbdH kbdClick" _key="ド"><span>ド</span></td>
+				<td class="kbdH kbdClick" _key="ゾ"><span>ゾ</span></td>
+				<td class="kbdH kbdClick" _key="ゴ"><span>ゴ</span></td>
+				<td class="kbdD kbdClick" _key="Close"><span class="kClose"></span></td>
+			</tr>
+		</table>	
+	</div>
+	<div id="virtualKeyboardChromeExtensionMainKatakana" style="display: none;">
+		<table cellpadding="2" id="virtualKeyboardChromeExtensionNumberBarKbd1">
+			<tr>
+				<td class="kbdH kbNumberMain kbdClick " _key="1"><span>1</span></td>
+				<td class="kbdH kbNumberMain kbdClick " _key="2"><span>2</span></td>
+				<td class="kbdH kbNumberMain kbdClick " _key="3"><span>3</span></td>
+				<td class="kbdH kbNumberMain kbdClick " _key="4"><span>4</span></td>
+				<td class="kbdH kbNumberMain kbdClick " _key="5"><span>5</span></td>
+				<td class="kbdH kbNumberMain kbdClick " _key="6"><span>6</span></td>
+				<td class="kbdH kbNumberMain kbdClick " _key="7"><span>7</span></td>
+				<td class="kbdH kbNumberMain kbdClick " _key="8"><span>8</span></td>
+				<td class="kbdH kbNumberMain kbdClick " _key="9"><span>9</span></td>
+				<td class="kbdH kbNumberMain kbdClick " _key="0"><span>0</span></td>
+			</tr>
+		</table>
+		<table cellpadding="2" class="virtualKeyboardChromeExtensionMainKeys">
+			<tr>
+				<td class="kbdH kdbCase kbdClick ja" _key="、"><span>、</span></td>
+				<td class="kbdH kdbCase kbdClick ja" _key="ワ"><span>ワ</span></td>
+				<td class="kbdH kdbCase kbdClick ja" _key="ラ"><span>ラ</span></td>
+				<td class="kbdH kdbCase kbdClick ja" _key="ヤ"><span>ヤ</span></td>
+				<td class="kbdH kdbCase kbdClick ja" _key="マ"><span>マ</span></td>
+				<td class="kbdH kdbCase kbdClick ja" _key="ハ"><span>ハ</span></td>
+				<td class="kbdH kdbCase kbdClick ja" _key="ナ"><span>ナ</span></td>
+				<td class="kbdH kdbCase kbdClick ja" _key="タ"><span>タ</span></td>
+				<td class="kbdH kdbCase kbdClick ja" _key="サ"><span>サ</span></td>
+				<td class="kbdH kdbCase kbdClick ja" _key="カ"><span>カ</span></td>
+				<td class="kbdH kdbCase kbdClick ja" _key="ア"><span>ア</span></td>
+
+				<td class="kbdHB kbdClick jaBackspace" _key="Backspace"><span>Backspace</span></td>
+			</tr>
+		</table>
+		<table cellpadding="2" class="virtualKeyboardChromeExtensionMainKeys">
+			<tr>
+				<td style="width: 8%;"><span></span></td>
+				<td style="width: 8%;"><span></span></td>
+				<td class="kbdH kdbCase kbdClick ja" _key="リ"><span>リ</span></td>
+				<td style="width: 8%;"><span></span></td>
+				<td class="kbdH kdbCase kbdClick ja" _key="ミ"><span>ミ</span></td>
+				<td class="kbdH kdbCase kbdClick ja" _key="ヒ"><span>ヒ</span></td>
+				<td class="kbdH kdbCase kbdClick ja" _key="ニ"><span>ニ</span></td>
+				<td class="kbdH kdbCase kbdClick ja" _key="チ"><span>チ</span></td>
+				<td class="kbdH kdbCase kbdClick ja" _key="シ"><span>シ</span></td>
+				<td class="kbdH kdbCase kbdClick ja" _key="キ"><span>キ</span></td>
+				<td class="kbdH kdbCase kbdClick ja" _key="イ"><span>イ</span></td>
+				<td style="width: 48px;"><span></span></td>
+			</tr>
+		</table>
+		<table cellpadding="2" class="virtualKeyboardChromeExtensionMainKeys">
+			<tr>
+				<td class="kbdH kdbCase kbdClick ja" _key="。"><span>。</span></td>
+				<td class="kbdH kdbCase kbdClick ja" _key="ヲ"><span>ヲ</span></td>
+				<td class="kbdH kdbCase kbdClick ja" _key="ル"><span>ル</span></td>
+				<td class="kbdH kdbCase kbdClick ja" _key="ユ"><span>ユ</span></td>
+				<td class="kbdH kdbCase kbdClick ja" _key="ム"><span>ム</span></td>
+				<td class="kbdH kdbCase kbdClick ja" _key="フ"><span>フ</span></td>
+				<td class="kbdH kdbCase kbdClick ja" _key="ヌ"><span>ヌ</span></td>
+				<td class="kbdH kdbCase kbdClick ja" _key="ツ"><span>ツ</span></td>
+				<td class="kbdH kdbCase kbdClick ja" _key="ス"><span>ス</span></td>
+				<td class="kbdH kdbCase kbdClick ja" _key="ク"><span>ク</span></td>
+				<td class="kbdH kdbCase kbdClick ja" _key="ウ"><span>ウ</span></td>
+				<td style="width: 48px;"><span></span></td>
+			</tr>
+		</table>
+		<table cellpadding="2" class="virtualKeyboardChromeExtensionMainKeys">
+			<tr>
+				<td style="width: 8%;"><span></span></td>
+				<td style="width: 8%;"><span></span></td>
+				<td class="kbdH kdbCase kbdClick ja" _key="レ"><span>レ</span></td>
+				<td style="width: 8%;"><span></span></td>
+				<td class="kbdH kdbCase kbdClick ja" _key="メ"><span>メ</span></td>
+				<td class="kbdH kdbCase kbdClick ja" _key="ヘ"><span>ヘ</span></td>
+				<td class="kbdH kdbCase kbdClick ja" _key="ネ"><span>ネ</span></td>
+				<td class="kbdH kdbCase kbdClick ja" _key="テ"><span>テ</span></td>
+				<td class="kbdH kdbCase kbdClick ja" _key="セ"><span>セ</span></td>
+				<td class="kbdH kdbCase kbdClick ja" _key="ケ"><span>ケ</span></td>
+				<td class="kbdH kdbCase kbdClick ja" _key="エ"><span>エ</span></td>
+				<td class="kbdD jaEnter kbdClick" _key="Enter"><span class="kEnter"></span></td>
+			</tr>
+		</table>
+		<table cellpadding="2" class="virtualKeyboardChromeExtensionMainKeys">
+			<tr>
+				<td class="kbdH kdbCase kbdClick ja" _key="ー"><span>ー</span></td>
+				<td class="kbdH kdbCase kbdClick ja" _key="ン"><span>ン</span></td>
+				<td class="kbdH kdbCase kbdClick ja" _key="ロ"><span>ロ</span></td>
+				<td class="kbdH kdbCase kbdClick ja" _key="ヨ"><span>ヨ</span></td>
+				<td class="kbdH kdbCase kbdClick ja" _key="モ"><span>モ</span></td>
+				<td class="kbdH kdbCase kbdClick ja" _key="ホ"><span>ホ</span></td>
+				<td class="kbdH kdbCase kbdClick ja" _key="ノ"><span>ノ</span></td>
+				<td class="kbdH kdbCase kbdClick ja" _key="ト"><span>ト</span></td>
+				<td class="kbdH kdbCase kbdClick ja" _key="ソ"><span>ソ</span></td>
+				<td class="kbdH kdbCase kbdClick ja" _key="コ"><span>コ</span></td>
+				<td class="kbdH kdbCase kbdClick ja" _key="オ"><span>オ</span></td>
+				<td id="katakana" class="kbdKatakana kbdClick" _key="SwitchTyping"><span>片仮名</span></td>
+			</tr>
+		</table>
+		<table cellpadding="2" class="virtualKeyboardChromeExtensionMainKeys">
+			<tr>
+				<td class="kbdD kbdClick" _key='" °'><span class="kAbc">" °</span></td>
+				<td class="kbdD kbdClick" _key="&123"><span class="kAbc">&123</span></td>
+				<td class="kbdS kbdClick" _key=" "><span></span></td>
+				<td class="kbdD kbdClick" _key="Close"><span class="kClose"></span></td>
+			</tr>
+		</table>
+	</div>
+</div>
