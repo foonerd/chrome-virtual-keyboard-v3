@@ -493,7 +493,7 @@
 }
 #virtualKeyboardChromeExtension.modeS.ja:not(#virtualKeyboardChromeExtensionHiraganaKeys):not(#virtualKeyboardChromeExtensionKatakanaKeys) {
 	zoom: 0.7 !important;
-	max-height: 59.2vh;
+	max-height: 71.2vh;
 }
 #virtualKeyboardChromeExtension.modeS.ja table {
 	margin: 10px;
