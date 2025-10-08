@@ -2,7 +2,7 @@
 
 ## Overview
 
-Chrome Virtual Keyboard V3 is a rebuild of the original [chrome-virtual-keyboard](https://github.com/xontab/chrome-virtual-keyboard) extension, updated for **Manifest V3** and modern Chromium-based browsers.
+Chrome Virtual Keyboard V3 is a rebuild of the Volumio maitained [chrome-virtual-keyboard](https://github.com/volumio/chrome-virtual-keyboard) extension, updated for **Manifest V3** and modern Chromium-based browsers.
 
 This version is designed specifically for **Volumio Bookworm internal builds**, enabling a lightweight on-screen keyboard for touch-enabled devices within the Volumio UI. It is **not intended for publication on the Chrome Web Store** or general end-user distribution.
 
