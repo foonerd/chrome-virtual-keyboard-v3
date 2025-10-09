@@ -54,6 +54,7 @@ var ALT_LAYOUTS = [
     {"value":"it","name":"Italian"},
     {"value":"ja","name":"Japanese"},
     {"value":"de","name":"German"},
+    {"value":"ch","name":"Swiss German"},
     {"value":"sl","name":"Slovenian"},
     {"value":"es","name":"Spanish"},
     {"value":"ru","name":"Russian"},

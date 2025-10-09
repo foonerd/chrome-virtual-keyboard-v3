@@ -29,6 +29,7 @@
       "resources": [
         "keyboard.html",
         "layouts/*.html",
+        "layouts/keyboard_ch.html",
         "layouts/keyboard_cs.html",
         "layouts/keyboard_de.html",
         "layouts/keyboard_en.html",
